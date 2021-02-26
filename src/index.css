@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
+:root {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 10px;
+  --bgColor: rgba(173, 216, 230, 1);
+  --contentColor: rgba(232, 244, 248, 1);
+  --secondaryBgColor: rgba(191, 93, 58, 1);
+  --primaryTxtColor: rgba(0, 0, 0, 1);
+  --secondaryTxtColor: rgba(255, 255, 255, 1);
+  --border: 1px solid var(--primaryTxtColor);
+  --boxShadow: 0px 3px 20px 3px rgba(0, 0, 0, 0.1);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bgColor);
+}
+/*
+=== navbar ===  */
+
+.navbar {
+  width: 80%;
+  max-width: 600px;
+  display: grid;
+  place-items: center;
+  margin: 5rem auto;
+  border-bottom: 0.1rem solid var(--primaryTxtColor);
+  background-color: var(--bgColor);
+}
+
+.navbar h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--primaryTxtColor);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.navbar .links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin: 1.6rem;
+  padding: 0.8rem 2.5rem;
+  font-size: 2rem;
+  color: var(--primaryTxtColor);
+  flex-wrap: wrap;
+  border: none;
+  border-radius: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--secondaryTxtColor);
+  background-color: var(--secondaryBgColor);
+}
+
+/*=== navbar ===  */
+.content {
+  background-color: var(--contentColor);
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 2rem;
+}
+
+button {
+  padding: 0.8rem 2.5rem;
+  margin: 2rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--primaryTxtColor);
+  background-color: var(--secondaryTxtColor);
+  border: var(--border);
+  border-radius: 2rem;
+  transition: all 0.6s ease-in-out;
+}
+button:hover,
+button:focus {
+  border: none;
+  color: var(--secondaryTxtColor);
+  background-color: var(--secondaryBgColor);
+  box-shadow: var(--boxShadow);
+  outline: none;
+}
+
+.blog-preview {
+  padding: 1rem 1.6rem;
+  margin: 2rem 0;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview:hover {
+  box-shadow: var(--boxShadow);
 }
