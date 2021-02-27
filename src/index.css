@@ -64,30 +64,21 @@ body {
   background-color: var(--secondaryBgColor);
 }
 
-/*=== navbar ===  */
+/*=== content ===  */
 .content {
   background-color: var(--contentColor);
   max-width: 600px;
   margin: 4rem auto;
   padding: 2rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: var(--boxShadow);
 }
 
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-p {
-  font-size: 2rem;
-  font-weight: 300;
-  text-align: center;
-  margin: 2rem;
-}
-
+/*=== Home ===  */
 button {
   padding: 0.8rem 2.5rem;
   margin: 2rem;
@@ -97,6 +88,7 @@ button {
   background-color: var(--secondaryTxtColor);
   border: var(--border);
   border-radius: 2rem;
+  text-align: center;
   transition: all 0.6s ease-in-out;
 }
 button:hover,
@@ -108,13 +100,79 @@ button:focus {
   outline: none;
 }
 
+/*=== BlogList ===  */
+
+h2 {
+  text-align: center;
+  font-size: 2.1rem;
+  margin: 1rem auto;
+}
+p {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 2rem;
+}
+
 .blog-preview {
-  padding: 1rem 1.6rem;
+  padding: 2rem 3rem;
   margin: 2rem 0;
   border-radius: 1rem;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .blog-preview:hover {
   box-shadow: var(--boxShadow);
+}
+
+.blog-preview a {
+  text-decoration: none;
+  color: var(--primaryTxtColor);
+}
+
+/*=== BlogDetails ===  */
+.blog-details h2 {
+  font-size: 2rem;
+  margin: 1rem auto;
+  color: var(--primaryTxtColor);
+}
+.blog-details div {
+  margin: 2rem auto;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/*=== Create ===  */
+.create {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+  font-size: 1.6rem;
+}
+.create h2 {
+  font-size: 2rem;
+  color: var var(--primaryTxtColor);
+  margin-bottom: 3rem;
+}
+.create input,
+.create textarea,
+.create select {
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-align: justify;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  margin: 1rem auto;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  display: block;
+}
+
+.create textarea {
+  min-height: 2.5rem;
 }
