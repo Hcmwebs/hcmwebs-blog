@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -8,7 +9,7 @@ const Create = () => {
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     const blog = { title, body, author };
 
@@ -34,16 +35,15 @@ const Create = () => {
           type='text'
           required
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
         />
         <label> Blog body</label>
         <textarea
           required
           value={body}
-          onChange={(e) => setBody(e.target.value)}
-        ></textarea>
+          onChange={e => setBody(e.target.value)}></textarea>
         <label>Blog Author: </label>
-        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
+        <select value={author} onChange={e => setAuthor(e.target.value)}>
           <option value='Heze'>Heze</option>
           <option value='Markus'>Markus</option>
         </select>

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
@@ -6,7 +7,7 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const abortCont = new AbortController();
+    const abortCont = new window.AbortController();
 
     setTimeout(() => {
       fetch(url, { signal: abortCont.signal })
