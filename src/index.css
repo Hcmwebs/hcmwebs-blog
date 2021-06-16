@@ -18,6 +18,7 @@
 }
 body {
   background-color: var(--bgColor);
+  font-size: 10px;
 }
 /*
 === navbar ===  */
@@ -49,13 +50,13 @@ body {
 
 .navbar a {
   text-decoration: none;
-  margin: 1.6rem;
-  padding: 0.8rem 2.5rem;
-  font-size: 2rem;
+  margin: 2.6rem;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
   color: var(--primaryTxtColor);
   flex-wrap: wrap;
   border: none;
-  border-radius: 2rem;
+  border-radius: 0.4rem;
   transition: all 0.5s ease-in-out;
 }
 
